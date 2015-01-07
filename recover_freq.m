@@ -2,8 +2,6 @@ clear all;
 close all;
 clc;
 
-addpath ./textureSynth/matlabPyrTools/;
-addpath ./textureSynth/matlabPyrTools/MEX;
 addpath ./GaborFilter
 addpath ./GA_code
 
@@ -58,6 +56,8 @@ wavwrite(denoise2,'denoise2.wav');
 
 video1 = struct('signal', video_signal1, 'frequency', video_freq1, 'music', denoise1);
 video2 = struct('signal', video_signal2, 'frequency', video_freq2, 'music', denoise2);
+wavwrite(denoise1, 'denoise1.wav');
+wavwrite(denoise2, 'denoise2.wav');
 
 
 
